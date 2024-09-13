@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "lanacion_logger"
+name = "logging_tracker"
 authors = [{ name = "aocana", email = "aocana@lanacion.com.ar" }]
 description = "Logger Lanacion Universal GCP"
 version = "0.0.1"
