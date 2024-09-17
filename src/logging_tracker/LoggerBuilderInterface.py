@@ -10,11 +10,10 @@ class LoggerBuilderInterface:
         return client.logger(sink)
 
     def _cloud_logger(self, params):
-        path = params.get("gcp_path")
         name = params.get("gcp_name")
         sink = params.get("gcp_sink")
 
-        if None in [path, name, sink]:
+        if None in [name, sink]:
             raise ValueError("Missing required parameters for cloud logger.")
 
         logger = self._get_logger(name, sink)
