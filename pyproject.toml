@@ -13,4 +13,4 @@ dependencies = ["google-cloud-logging"]
 
 
 [tool.setuptools.packages]
-find = { where = ["logging_tracker"] }
+find = { where = ["src"] }
