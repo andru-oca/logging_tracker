@@ -8,25 +8,18 @@ if TYPE_CHECKING:
 class WrapperLogger:
     """Wrapper para el logger de GCP para que sea mas intuitivo su uso"""
 
-    LevelStr = Literal["critical", "fatal", "error", "warn", "warning", "info", "debug"]
-    SeverityStr = Literal[
-        "CRITICAL", "FATAL", "ERROR", "WARN", "WARNING", "INFO", "DEBUG", "NOTSET"
-    ]
-
-    SEV_DICT: Dict[LevelStr, SeverityStr] = {
-        "debug": "DEBUG",
-        "info": "INFO",
-        "warning": "WARNING",
-        "warn": "WARNING",
-        "error": "ERROR",
-        "exception": "ERROR",
-        "critical": "CRITICAL",
-    }
-
-
     log_levels = ["debug", "info", "warning", "warn", "error", "exception", "critical"]
 
     def __init__(self, logger: "Logger") -> None:
+        self.SEV_DICT = {
+            "debug": "DEBUG",
+            "info": "INFO",
+            "warning": "WARNING",
+            "warn": "WARNING",
+            "error": "ERROR",
+            "exception": "ERROR",
+            "critical": "CRITICAL",
+        }
         self._logger = logger
         self._labels: Optional[Dict[str, str]] = None
         self._set_attr_log_levels()
