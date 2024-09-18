@@ -13,7 +13,7 @@ class WrapperLogger:
         "CRITICAL", "FATAL", "ERROR", "WARN", "WARNING", "INFO", "DEBUG", "NOTSET"
     ]
 
-    SEV_DICT: Dict[LevelStr, SeverityStr] = {  # type: ignore
+    SEV_DICT: Dict[LevelStr, SeverityStr] = {
         "debug": "DEBUG",
         "info": "INFO",
         "warning": "WARNING",
