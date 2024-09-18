@@ -48,13 +48,13 @@ class WrapperLogger:
             if labels is None:
                 self._logger.log_text(
                     text if isinstance(text, str) else str(text),
-                    severity=self.SEV_DICT[level],  # SeverityStr
+                    severity=self.SEV_DICT[level]  # SeverityStr
                 )
             else:
                 self._logger.log_text(
                     text if isinstance(text, str) else str(text),
                     severity=self.SEV_DICT[level],  # SeverityStr
-                    labels=labels,
+                    labels=labels
                 )
 
         return log_func
