@@ -32,7 +32,6 @@ log.info("This is a test log message.")
 
 2. **`cloud` (Wrapper Logger)**: Logs messages to a cloud-based logging system (e.g., GCP).
    - **Parameters**:
-     - `gcp_path` (str): The path to the GCP project.
      - `gcp_name` (str): The GCP project ID.
      - `gcp_sink` (str): The GCP sink name.
 
@@ -51,7 +50,7 @@ log.info("Application started.")
 #### Cloud Logger
 ```python
 Logger = LoggerBuilder()
-log = Logger.builder(option="cloud", gcp_path="/path/to/gcp", gcp_name="project-id", gcp_sink="sink-name")
+log = Logger.builder(option="cloud", gcp_name="project-id", gcp_sink="sink-name")
 log.info("Logging to GCP.")
 ```
 
