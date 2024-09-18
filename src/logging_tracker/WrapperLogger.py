@@ -50,6 +50,6 @@ class WrapperLogger:
         return log_func
 
     def log(self, msg, level: str):
-        assert level in str.SEV_DICT
+        assert level in self.SEV_DICT
         func: Callable = getattr(self, level)
         func(msg)
