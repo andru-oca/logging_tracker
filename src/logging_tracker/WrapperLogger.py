@@ -1,4 +1,4 @@
-from typing import Callable, Optional, Dict, TYPE_CHECKING, Union
+from typing import Callable, Optional, Dict, TYPE_CHECKING, Union, Any
 from .LoggerMeta import LoggerMeta
 
 if TYPE_CHECKING:
