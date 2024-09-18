@@ -1,10 +1,11 @@
 from typing import Callable, Optional, Dict, TYPE_CHECKING
+from .LoggerMeta import LoggerMeta
 
 if TYPE_CHECKING:
     from google.cloud.logging import Logger
 
 
-class WrapperLogger:
+class WrapperLogger(metaclass=LoggerMeta):
     """Wrapper para el logger de GCP para que sea mas intuitivo su uso"""
 
     log_levels = ["debug", "info", "warning", "warn", "error", "exception", "critical"]

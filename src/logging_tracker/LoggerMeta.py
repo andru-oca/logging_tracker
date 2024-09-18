@@ -21,6 +21,5 @@ class LoggerMeta(type):
         }
 
         dct["SEV_DICT"] = SEV_DICT
-        # dct["get_logger"] = cls.get_logger
 
         return super().__new__(cls, name, bases, dct)
