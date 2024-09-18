@@ -5,8 +5,24 @@ if TYPE_CHECKING:
     from google.cloud.logging import Logger
 
 
-class WrapperLogger(metaclass=LoggerMeta):
+class WrapperLogger:
     """Wrapper para el logger de GCP para que sea mas intuitivo su uso"""
+
+    LevelStr = Literal["critical", "fatal", "error", "warn", "warning", "info", "debug"]
+    SeverityStr = Literal[
+        "CRITICAL", "FATAL", "ERROR", "WARN", "WARNING", "INFO", "DEBUG", "NOTSET"
+    ]
+
+    SEV_DICT: Dict[LevelStr, SeverityStr] = {  # type: ignore
+        "debug": "DEBUG",
+        "info": "INFO",
+        "warning": "WARNING",
+        "warn": "WARNING",
+        "error": "ERROR",
+        "exception": "ERROR",
+        "critical": "CRITICAL",
+    }
+
 
     log_levels = ["debug", "info", "warning", "warn", "error", "exception", "critical"]
 
