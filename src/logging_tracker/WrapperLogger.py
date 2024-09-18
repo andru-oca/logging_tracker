@@ -21,8 +21,6 @@ class WrapperLogger:
             "exception": "ERROR",
             "critical": "CRITICAL",
         }
-        print(f"Initialized SEV_DICT: {self.SEV_DICT}")
-
         self._logger = logger
         self._labels: Optional[Dict[str, str]] = None
         self._set_attr_log_levels()
